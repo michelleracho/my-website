@@ -32,4 +32,99 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
 }
+
+.side-nav {
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.side-nav__item {
+  position: relative;
+}
+
+.side-nav__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.side-nav__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(var(--color-red-light)), to(var(--color-red)));
+  background-image: linear-gradient(to left, var(--color-red-light), var(--color-red));
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-image 0.1s, -webkit-transform 0.2s;
+  transition: width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-image 0.1s, -webkit-transform 0.2s;
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-image 0.1s;
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-image 0.1s, -webkit-transform 0.2s;
+}
+
+.side-nav__item:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  width: 100%;
+}
+
+.side-nav__link:link, .side-nav__link:visited {
+  color: var(--color-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  position: relative;
+  z-index: 100;
+  padding-left: 0.5rem;
+  padding-right: 7rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 25rem;
+}
+
+.sidebar__heading {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-bottom: 2px solid var(--color-yellow);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.sidebar__heading span {
+  color: var(--color-red);
+}
+
+.content {
+  margin-right: auto;
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */

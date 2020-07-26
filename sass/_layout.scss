@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+// ============= SIDEBAR =============
+.sidebar {
+  // background-color: skyblue;
+  display: flex;
+  flex: 0 0 25%;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 25rem;
+
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 2px solid var(--color-yellow);
+    margin-bottom: 1rem;
+    display: inline-block;
+
+    span {
+      color: var(--color-red);
+    }
+  }
+}
+
+// ============= CONTENT =============
+.content {
+  // background-color: orangered;
+  margin-right: auto;
+  width: 100%;
+}
