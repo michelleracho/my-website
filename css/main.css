@@ -1,0 +1,35 @@
+:root {
+  --color-white: #fff;
+  --color-gray: #777;
+  --color-gray-light: #ccc;
+  --color-gray-dark: #333;
+  --color-red: #e43e3e;
+  --color-red-light: #da627d;
+  --color-yellow: #ffd98a;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Baloo Da 2', cursive;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-white);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-gray)), to(var(--color-gray-dark)));
+  background-image: linear-gradient(to right bottom, var(--color-gray), var(--color-gray-dark));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+/*# sourceMappingURL=main.css.map */
