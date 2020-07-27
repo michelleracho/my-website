@@ -9,6 +9,7 @@
   --color-red: #e43e3e;
   --color-red-light: #da627d;
   --color-yellow: #ffd98a;
+  --shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 
 *,
@@ -105,9 +106,7 @@ body {
   display: block;
 }
 
-.header__heading h1 span:last-child {
-  color: var(--color-red-light);
-  font-weight: 700;
+.header__heading h1 .highlight {
   letter-spacing: 3px;
 }
 
@@ -128,9 +127,55 @@ body {
   height: 75vh;
   -webkit-filter: grayscale(60%);
           filter: grayscale(60%);
-  -webkit-box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
   border-radius: 3px;
+}
+
+.about {
+  font-size: 1.6rem;
+  font-weight: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__img {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  width: 43rem;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  border-radius: 3px;
+}
+
+.about__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  margin-left: 3rem;
+}
+
+.about__text p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  text-transform: lowercase;
+  opacity: 0.3;
+  margin: 3rem 0;
 }
 
 .btn-learn-more:link, .btn-learn-more:visited {
@@ -163,6 +208,24 @@ body {
 .btn-learn-more:link:hover::after, .btn-learn-more:visited:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.highlight {
+  color: var(--color-red);
+  background-color: var(--color-yellow);
+  font-weight: 700;
+  display: inline-block;
+  padding: 0 0.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.highlight:hover {
+  -webkit-transform: rotate(5deg) scale(1.3);
+          transform: rotate(5deg) scale(1.3);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 .container {
