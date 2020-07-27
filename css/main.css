@@ -185,6 +185,7 @@ body {
 
 .contact {
   font-size: 1.6rem;
+  padding-bottom: 30rem;
 }
 
 .contact__content {
@@ -252,6 +253,15 @@ body {
     -webkit-transform: translateX(0) rotate(-100deg);
             transform: translateX(0) rotate(-100deg);
   }
+}
+
+.footer {
+  font-size: 1.4rem;
+}
+
+.footer__text {
+  color: var(--color-gray);
+  padding-bottom: 1rem;
 }
 
 .section-title {
