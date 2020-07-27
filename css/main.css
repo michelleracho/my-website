@@ -10,6 +10,7 @@
   --color-red-light: #da627d;
   --color-yellow: #ffd98a;
   --shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-small: 0 0 0.6rem rgba(0, 0, 0, 0.3);
   --shadow-yellow: 0 2rem 6rem rgba(255, 217, 138, 0.3);
 }
 
@@ -182,6 +183,77 @@ body {
   margin-bottom: 3rem;
 }
 
+.contact {
+  font-size: 1.6rem;
+}
+
+.contact__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__text--main {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+.contact__text--smiley {
+  font-size: 1.8rem;
+  color: var(--color-yellow);
+  -webkit-animation: roll 5s infinite;
+          animation: roll 5s infinite;
+}
+
+@-webkit-keyframes roll {
+  0% {
+    -webkit-transform: translateX(0) rotate(-100deg);
+            transform: translateX(0) rotate(-100deg);
+  }
+  50% {
+    -webkit-transform: translateX(100%) rotate(100deg);
+            transform: translateX(100%) rotate(100deg);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(-100deg);
+            transform: translateX(0) rotate(-100deg);
+  }
+}
+
+@keyframes roll {
+  0% {
+    -webkit-transform: translateX(0) rotate(-100deg);
+            transform: translateX(0) rotate(-100deg);
+  }
+  50% {
+    -webkit-transform: translateX(100%) rotate(100deg);
+            transform: translateX(100%) rotate(100deg);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(-100deg);
+            transform: translateX(0) rotate(-100deg);
+  }
+}
+
 .section-title {
   font-size: 5rem;
   display: inline-block;
@@ -247,11 +319,6 @@ section:not(:first-of-type) .section-title {
 
 .list__item i {
   font-size: 3.5rem;
-  color: transparent;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-red-light)), to(var(--color-red)));
-  background-image: linear-gradient(to right bottom, var(--color-red-light), var(--color-red));
-  -webkit-background-clip: text;
-  background-clip: text;
   margin: 1rem auto;
 }
 
@@ -263,13 +330,16 @@ section:not(:first-of-type) .section-title {
           box-shadow: var(--shadow);
 }
 
-.btn-learn-more:link, .btn-learn-more:visited {
+.btn:link, .btn:visited {
   font-size: 1.5rem;
   color: var(--color-white);
   text-decoration: none;
+  display: inline-block;
+}
+
+.btn-learn-more:link, .btn-learn-more:visited {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  display: inline-block;
   opacity: 0.3;
 }
 
@@ -295,6 +365,33 @@ section:not(:first-of-type) .section-title {
           transform: scaleX(1);
 }
 
+.btn-contact:link, .btn-contact:visited {
+  font-size: 4rem;
+  margin: 1.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn-contact:hover {
+  color: var(--color-red);
+  -webkit-transform: scale(1.2) translateY(-0.5rem) rotate(-5deg);
+          transform: scale(1.2) translateY(-0.5rem) rotate(-5deg);
+  padding: 0;
+  border-bottom: 1px solid var(--color-yellow);
+}
+
+.btn-contact:hover:nth-child(2n) {
+  -webkit-transform: scale(1.2) translateY(-0.5rem) rotate(10deg);
+          transform: scale(1.2) translateY(-0.5rem) rotate(10deg);
+}
+
+.btn-contact:active, .btn-contact:nth-child(2n):active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  color: var(--color-red-light);
+  border-bottom: none;
+}
+
 .highlight {
   color: var(--color-red);
   background-color: var(--color-yellow);
@@ -311,6 +408,14 @@ section:not(:first-of-type) .section-title {
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
   cursor: pointer;
+}
+
+.text-gradient {
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-red-light)), to(var(--color-red)));
+  background-image: linear-gradient(to right bottom, var(--color-red-light), var(--color-red));
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .container {
