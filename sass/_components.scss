@@ -98,8 +98,8 @@
   font-size: 1.6rem;
   font-weight: 100;
 
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 
   &__content {
     display: flex;
@@ -128,10 +128,16 @@
 
 // ============= SKILLS =============
 .skills {
+  font-size: 1.6rem;
+
   &__content {
+    display: flex;
+    flex-direction: column;
+    margin: auto 5rem;
   }
 
   &__dev {
+    margin-bottom: 3rem;
   }
 
   &__tools {
@@ -141,18 +147,66 @@
 // ============= SECTION TITLE =============
 .section-title {
   font-size: 5rem;
+  display: inline-block;
   letter-spacing: 1rem;
   text-transform: lowercase;
   opacity: 0.3;
-  margin: 3rem 0;
+  // margin: 3rem 0;
+  margin-bottom: 5rem;
+  border-bottom: 2px solid var(--color-yellow);
+}
+
+section:not(:first-of-type) {
+  .section-title {
+    margin-top: 20rem;
+  }
 }
 
 // ============= LIST =============
 .list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+
   &__heading {
+    // margin-bottom: 2rem;
+    letter-spacing: 0.3rem;
+    font-size: 2.6rem;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+
+    i {
+      margin-right: 1.2rem;
+    }
   }
 
   &__item {
+    // color: var(--color-yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 11rem;
+    margin: 1.5rem;
+    padding: 0.8rem;
+    transition: all 0.2s;
+
+    i {
+      font-size: 3.5rem;
+      color: transparent;
+      background-image: linear-gradient(to right bottom, var(--color-red-light), var(--color-red));
+      -webkit-background-clip: text;
+      background-clip: text;
+      margin: 1rem auto;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      border-radius: 3px;
+      box-shadow: var(--shadow);
+      // box-shadow: var(--shadow-yellow);
+    }
   }
 }
 
