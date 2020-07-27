@@ -126,6 +126,18 @@
   }
 }
 
+// ============= SKILLS =============
+.skills {
+  &__content {
+  }
+
+  &__dev {
+  }
+
+  &__tools {
+  }
+}
+
 // ============= SECTION TITLE =============
 .section-title {
   font-size: 5rem;
@@ -133,6 +145,15 @@
   text-transform: lowercase;
   opacity: 0.3;
   margin: 3rem 0;
+}
+
+// ============= LIST =============
+.list {
+  &__heading {
+  }
+
+  &__item {
+  }
 }
 
 // ============= BUTTON =============
