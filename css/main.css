@@ -1,7 +1,10 @@
 :root {
   --color-white: #fff;
   --color-gray: #777;
-  --color-gray-light: #ccc;
+  --color-gray-light-1: #ccc;
+  --color-gray-light-2: #c0bdbd;
+  --color-gray-light-3: #bbb8b4;
+  --color-gray-light-4: #d9d7d3;
   --color-gray-dark: #333;
   --color-red: #e43e3e;
   --color-red-light: #da627d;
@@ -81,6 +84,87 @@ body {
   padding-right: 7rem;
 }
 
+.header {
+  height: 100vh;
+  position: relative;
+}
+
+.header__heading {
+  position: relative;
+  z-index: 100;
+}
+
+.header__heading h1 {
+  font-size: 9rem;
+  font-weight: 300;
+  line-height: 100%;
+  padding-top: 15rem;
+}
+
+.header__heading h1 span:first-child {
+  display: block;
+}
+
+.header__heading h1 span:last-child {
+  color: var(--color-red-light);
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.header__heading h2 {
+  font-size: 4rem;
+  font-weight: 200;
+  margin-bottom: 2rem;
+}
+
+.header__photo {
+  position: absolute;
+  top: 0;
+  right: -5rem;
+  z-index: 10;
+}
+
+.header__img {
+  height: 75vh;
+  -webkit-filter: grayscale(60%);
+          filter: grayscale(60%);
+  -webkit-box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.btn-learn-more:link, .btn-learn-more:visited {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+  opacity: 0.3;
+}
+
+.btn-learn-more:link::after, .btn-learn-more:visited::after {
+  display: block;
+  content: '';
+  border-bottom: 1px solid var(--color-yellow);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: border-bottom 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, -webkit-transform 0.2s;
+  transition: border-bottom 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, -webkit-transform 0.2s;
+  transition: transform 0.2s, border-bottom 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+  transition: transform 0.2s, border-bottom 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, -webkit-transform 0.2s;
+}
+
+.btn-learn-more:link:hover, .btn-learn-more:visited:hover {
+  color: var(--color-red-light);
+  opacity: 1;
+}
+
+.btn-learn-more:link:hover::after, .btn-learn-more:visited:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,7 +189,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 25rem;
+  padding-right: 20rem;
+  padding-top: 15rem;
+  background-color: var(--color-gray);
 }
 
 .sidebar__heading {
@@ -125,6 +211,7 @@ body {
 
 .content {
   margin-right: auto;
+  padding-left: 20rem;
   width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

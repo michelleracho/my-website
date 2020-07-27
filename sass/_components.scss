@@ -44,3 +44,86 @@
     padding-right: 7rem;
   }
 }
+
+// ============= HEADER =============
+.header {
+  height: 100vh;
+  position: relative;
+
+  &__heading {
+    position: relative;
+    // top: 18rem;
+    // left: 0;
+    z-index: 100;
+
+    h1 {
+      font-size: 9rem;
+      font-weight: 300;
+      line-height: 100%;
+      padding-top: 15rem;
+
+      span:first-child {
+        display: block;
+      }
+
+      span:last-child {
+        color: var(--color-red-light);
+        font-weight: 700;
+        letter-spacing: 3px;
+      }
+    }
+
+    h2 {
+      font-size: 4rem;
+      font-weight: 200;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    top: 0;
+    right: -5rem;
+    z-index: 10;
+  }
+
+  &__img {
+    height: 75vh;
+    filter: grayscale(60%);
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+  }
+}
+
+// ============= BUTTON =============
+.btn-learn-more {
+  &:link,
+  &:visited {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+    opacity: 0.3;
+
+    &::after {
+      display: block;
+      content: '';
+      border-bottom: 1px solid var(--color-yellow);
+      transform: scaleX(0);
+      transition: transform 0.2s, border-bottom 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+    }
+
+    &:hover {
+      color: var(--color-red-light);
+      opacity: 1;
+
+      &::after {
+        // content: '\2193';
+        // padding-left: 0.5rem;
+
+        transform: scaleX(1);
+      }
+    }
+  }
+}

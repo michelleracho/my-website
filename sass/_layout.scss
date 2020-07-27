@@ -10,7 +10,9 @@
   flex: 0 0 25%;
   flex-direction: column;
   align-items: center;
-  padding-right: 25rem;
+  padding-right: 20rem;
+  padding-top: 15rem;
+  background-color: var(--color-gray);
 
   &__heading {
     font-size: 1.6rem;
@@ -30,7 +32,8 @@
 
 // ============= CONTENT =============
 .content {
-  // background-color: orangered;
+  // background-image: linear-gradient(to right bottom, var(--color-gray-light-1), var(--color-gray));
   margin-right: auto;
+  padding-left: 20rem;
   width: 100%;
 }
