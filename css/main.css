@@ -42,14 +42,25 @@ body {
 .side-nav {
   font-size: 1.5rem;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  position: fixed;
+  padding-top: 5rem;
 }
 
 .side-nav__item {
   position: relative;
+  padding: 0.25rem 0;
 }
 
-.side-nav__item:not(:last-child) {
-  margin-bottom: 0.5rem;
+.side-nav__item .fas {
+  font-size: 1.2rem;
 }
 
 .side-nav__item::before {
@@ -69,10 +80,15 @@ body {
   transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-image 0.1s, -webkit-transform 0.2s;
 }
 
-.side-nav__item:hover::before {
+.side-nav__item:hover::before, .side-nav__item--active::before {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
   width: 100%;
+}
+
+.side-nav__item:active::before {
+  background-image: -webkit-gradient(linear, right top, left top, from(var(--color-red)), to(var(--color-red)));
+  background-image: linear-gradient(to left, var(--color-red), var(--color-red));
 }
 
 .side-nav__link:link, .side-nav__link:visited {
@@ -82,7 +98,6 @@ body {
   letter-spacing: 0.5px;
   display: block;
   position: relative;
-  z-index: 100;
   padding-left: 0.5rem;
   padding-right: 7rem;
 }
@@ -459,14 +474,16 @@ section:not(:first-of-type) .section-title {
 }
 
 .sidebar__heading {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 300;
   color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 3px;
   border-bottom: 2px solid var(--color-yellow);
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   display: inline-block;
+  z-index: 100;
+  position: fixed;
 }
 
 .sidebar__heading span {
