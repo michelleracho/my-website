@@ -45,7 +45,8 @@
 
   &__item:active::before {
     // background-image: linear-gradient(to right, var(--color-red-light), var(--color-red));
-    background-image: linear-gradient(to left, var(--color-red), var(--color-red));
+    // background-image: linear-gradient(to left, var(--color-red), var(--color-red));
+    background: var(--color-red);
   }
 
   &__link:link,
@@ -114,6 +115,7 @@
 .about {
   font-size: 1.6rem;
   font-weight: 100;
+  margin-bottom: 20rem;
 
   // display: flex;
   // flex-direction: column;
@@ -146,6 +148,7 @@
 // ============= SKILLS =============
 .skills {
   font-size: 1.6rem;
+  margin-bottom: 20rem;
 
   &__content {
     display: flex;
@@ -164,7 +167,7 @@
 // ============= CONTACT =============
 .contact {
   font-size: 1.6rem;
-  padding-bottom: 30rem;
+  margin-bottom: 30rem;
 
   &__content {
     display: flex;
@@ -237,11 +240,11 @@
   border-bottom: 2px solid var(--color-yellow);
 }
 
-section:not(:first-of-type) {
-  .section-title {
-    margin-top: 20rem;
-  }
-}
+// section:not(:first-of-type) {
+//   .section-title {
+//     padding-top: 20rem;
+//   }
+// }
 
 // ============= LIST =============
 .list {
@@ -321,6 +324,11 @@ section:not(:first-of-type) {
 
           transform: scaleX(1);
         }
+      }
+
+      &:active {
+        color: var(--color-red);
+        transform: translateY(0.5rem);
       }
     }
   }
