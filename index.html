@@ -20,45 +20,50 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" href="img/mracho-logo.png" type="image/x-icon" />
 
+    <!-- <script src="script.js"></script> -->
+
     <title>Michelle Racho | Web Developer</title>
   </head>
   <body>
     <div class="container">
       <!-- side nav -->
-      <nav class="sidebar">
-        <h3 class="sidebar__heading">Michelle <span>Racho</span></h3>
-        <ul class="side-nav">
-          <li class="side-nav__item side-nav__item--active">
-            <a href="#home" class="side-nav__link">Home</a>
-          </li>
-          <li class="side-nav__item">
-            <a href="#about" class="side-nav__link">About</a>
-          </li>
-          <li class="side-nav__item">
-            <a href="#skills" class="side-nav__link">Skills</a>
-          </li>
-          <!-- <li class="side-nav__item">
+      <div class="sidebar">
+        <nav class="sidebar__content">
+          <h3 class="sidebar__heading">Michelle <span>Racho</span></h3>
+          <ul class="side-nav">
+            <!-- <li class="side-nav__item side-nav__item--active"> -->
+            <li class="side-nav__item">
+              <a href="#home" class="side-nav__link">Home</a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#about" class="side-nav__link">About</a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#skills" class="side-nav__link">Skills</a>
+            </li>
+            <!-- <li class="side-nav__item">
             <a href="#portfolio" class="side-nav__link">Portfolio</a>
           </li> -->
-          <li class="side-nav__item">
-            <a href="MRacho-Resume.pdf" target="_blank" class="side-nav__link">
-              Resum&Eacute; <i class="fas fa-external-link-square-alt"></i>
-            </a>
-          </li>
-          <li class="side-nav__item">
-            <a href="#contact" class="side-nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
+            <li class="side-nav__item">
+              <a href="MRacho-Resume.pdf" target="_blank" class="side-nav__link">
+                Resum&Eacute; <i class="fas fa-external-link-square-alt"></i>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#contact" class="side-nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       <!-- main content -->
       <div class="content">
-        <header class="header">
+        <header class="header" id="home">
           <div class="header__heading">
             <h1><span>Hello</span> I'm <span class="highlight">Michelle Racho</span></h1>
             <h2>and I'm an aspiring developer.</h2>
           </div>
-          <div class="header__photo" id="home">
+          <div class="header__photo">
             <img src="img/header-photo-1.jpg" alt="Header photo" class="header__img" />
           </div>
           <a href="#about" class="btn btn-learn-more">Learn more</a>
