@@ -34,9 +34,9 @@ html {
   }
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 31.25em) {
   html {
-    font-size: 48%;
+    font-size: 60%;
   }
 }
 
@@ -114,10 +114,22 @@ body {
   }
 }
 
+@media only screen and (max-width: 31.25em) {
+  .side-nav__item:not(:first-child) {
+    border-left: 1px solid rgba(51, 51, 51, 0.1);
+  }
+}
+
 .side-nav__item .fas {
   font-size: 1.1rem;
   padding-left: 0.4rem;
-  padding-bottom: 0.45rem;
+  padding-bottom: 0.25rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .side-nav__item .fas {
+    display: none;
+  }
 }
 
 .side-nav__item::before {

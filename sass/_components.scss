@@ -40,10 +40,20 @@
       flex: 1;
     }
 
+    @media only screen and (max-width: $bp-smallest) {
+      &:not(:first-child) {
+        border-left: 1px solid rgba(51, 51, 51, 0.1);
+      }
+    }
+
     .fas {
       font-size: 1.1rem;
       padding-left: 0.4rem;
-      padding-bottom: 0.45rem;
+      padding-bottom: 0.25rem;
+
+      @media only screen and (max-width: $bp-small) {
+        display: none;
+      }
     }
   }
 
