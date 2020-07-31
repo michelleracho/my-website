@@ -5,7 +5,7 @@
 - best viewed on a 1800px screen using Google Chrome but smaller screens are okay too :D
 
 ### TODO:
-[] add JavaScript
-[] add portfolio section
-[] refactor...
-[] add feature supports for cross browser/version compatibility
+* [ ] add JavaScript
+* [ ] add portfolio section
+* [ ] refactor...
+* [ ] add feature supports for cross browser/version compatibility
