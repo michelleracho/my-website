@@ -135,7 +135,16 @@
 
       .highlight {
         letter-spacing: 3px;
+        line-height: 4rem;
+
+        &:hover {
+          line-height: 100%;
+        }
       }
+
+      // & .highlight:hover {
+      //   line-height: normal;
+      // }
     }
 
     h2 {
@@ -148,7 +157,9 @@
   &__photo {
     position: absolute;
     top: 0;
-    right: -3.2rem;
+    // right: -3.2rem;
+    right: 0;
+
     z-index: 10;
 
     @media only screen and (max-width: $bp-larger) {
@@ -196,11 +207,11 @@
 
   &__photo {
     // flex: 0 0 40%;
+    align-self: center;
 
     @media only screen and (max-width: $bp-larger) {
       // background-color: skyblue;
       // width: 43rem;
-      align-self: center;
     }
   }
 
