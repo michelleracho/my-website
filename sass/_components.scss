@@ -2,26 +2,29 @@
 .side-nav {
   // background-color: skyblue;
   font-size: 1.5rem;
-  // padding-right: 7rem;
   list-style: none;
   display: flex;
   flex-direction: column;
+  flex: 1;
   z-index: 100;
-  // position: fixed;
-  // padding-top: 5rem;
-  // padding: 0 3rem;
 
   @media only screen and (max-width: $bp-larger) {
     // background-color: skyblue;
     flex-direction: row;
-    margin-left: 5rem;
-    // border-left: 1px solid var(--color-gray);
-    // border-bottom: 1px solid var(--color-gray);
-    // box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+    margin-left: 15rem;
+    align-items: center;
+    justify-content: space-around;
+    // flex: 1;
   }
 
   @media only screen and (max-width: $bp-large) {
+    margin-left: 8rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
     margin-left: 0;
+    margin-top: 1rem;
+    align-self: stretch;
   }
 
   &__item {
@@ -30,14 +33,11 @@
     position: relative;
     padding: 0.4rem 0;
 
-    // &:not(:last-child) {
-    //   padding-bottom: 0.5rem;
-    // }
-
     @media only screen and (max-width: $bp-larger) {
-      padding-right: 2rem;
+      // padding-right: 2rem;
       margin: 0;
-      width: 15rem;
+      // width: 15rem;
+      flex: 1;
     }
 
     .fas {
@@ -54,7 +54,6 @@
     left: 0;
     width: 3px;
     height: 100%;
-    // background-color: var(--color-red);
     background-image: linear-gradient(to left, var(--color-red-light), var(--color-red));
     transform: scaleY(0);
     transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-image 0.1s;
@@ -67,8 +66,6 @@
   }
 
   &__item:active::before {
-    // background-image: linear-gradient(to right, var(--color-red-light), var(--color-red));
-    // background-image: linear-gradient(to left, var(--color-red), var(--color-red));
     background: var(--color-red);
   }
 
@@ -78,11 +75,8 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    // display: block;
     position: relative;
-    // z-index: 100;
     padding-left: 0.5rem;
-    // padding-right: 7rem;
 
     display: flex;
     align-items: center;

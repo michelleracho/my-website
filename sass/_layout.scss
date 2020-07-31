@@ -35,18 +35,12 @@
 // ============= SIDEBAR =============
 .sidebar {
   // border: 2px solid skyblue;
+  // background-color: blue;
   display: flex;
-  // display: block;
   flex: 0 0 25%;
   flex-direction: column;
-  // align-items: center;
   padding-right: 15rem;
   padding-top: 15rem;
-  // background-color: var(--color-gray);
-  // background-color: rgba(119, 119, 119, 0.8);
-  // margin-right: -10rem;
-  // border-left: 1px solid var(--color-gray);
-  // position: fixed;
 
   @media only screen and (max-width: $bp-larger) {
     // background-color: skyblue;
@@ -59,14 +53,14 @@
 
   &__content {
     // border: 2px solid skyblue;
-    position: fixed;
+    position: fixed; // breaks flexbox behavior?
     z-index: 1000;
     padding: 4rem;
-    // padding: 2rem 2rem 2rem 4rem;
     border-left: 1px solid var(--color-gray);
 
     display: flex;
     flex-direction: column;
+    // align-items: flex-start;
     overflow: hidden;
 
     @media only screen and (max-width: $bp-larger) {
@@ -74,13 +68,21 @@
       background-image: linear-gradient(to right, transparent, var(--color-gray), transparent);
       flex-direction: row;
       align-items: center;
-      padding: 1rem;
+      // justify-content: space-between;
+      width: 100vw;
+      // flex: 0 0 100%;
+      padding: 1rem 5rem;
       border-left: none;
-      // border-bottom: 1px solid var(--color-gray);
     }
 
-    @media only screen and (max-width: $bp-large) {
+    // @media only screen and (max-width: $bp-large) {
+    //   flex-direction: column;
+    // }
+
+    @media only screen and (max-width: $bp-medium) {
+      // border: 2px solid pink;
       flex-direction: column;
+      align-items: center;
     }
 
     .logo {
@@ -103,9 +105,6 @@
     border-bottom: 2px solid var(--color-yellow);
     margin-bottom: 2.5rem;
     display: inline-block;
-    // z-index: 100;
-    // position: fixed;
-    // border-left: 1px solid var(--color-gray);
 
     @media only screen and (max-width: $bp-larger) {
       // background-color: skyblue;
@@ -114,8 +113,8 @@
 
     @media only screen and (max-width: $bp-large) {
       // display: none;
-      font-size: 1.9rem;
-      margin-bottom: 1rem;
+      // font-size: 1.9rem;
+      // margin-bottom: 1rem;
     }
 
     span {
