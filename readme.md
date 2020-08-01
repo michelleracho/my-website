@@ -1,4 +1,5 @@
 # My personal portfolio website
+## view live website at [michelleracho.com](https://www.michelleracho.com/)
 
 - current working version is built with HTML and CSS/SASS
 - built using the desktop-first approach and is 'fully' responsive
