@@ -1,7 +1,7 @@
 # My personal portfolio website
-## view live website at [michelleracho.com](https://www.michelleracho.com/)
 
 - current working version is built with HTML and CSS/SASS
+  - view live website at [michelleracho.com](https://www.michelleracho.com/)
 - built using the desktop-first approach and is 'fully' responsive
 - best viewed on a 1800px screen using Google Chrome but smaller screens are okay too :D
 
