@@ -1,0 +1,102 @@
+// ============= SIDE NAV =============
+.side-nav {
+  // background-color: skyblue;
+  font-size: 1.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  z-index: 100;
+
+  @media only screen and (max-width: $bp-larger) {
+    // background-color: skyblue;
+    flex-direction: row;
+    margin-left: 15rem;
+    align-items: center;
+    justify-content: space-around;
+    // flex: 1;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    margin-left: 8rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-left: 0;
+    margin-top: 1rem;
+    align-self: stretch;
+  }
+
+  &__item {
+    // border: 2px solid red;
+    margin: 0 2rem;
+    position: relative;
+    padding: 0.4rem 0;
+
+    @media only screen and (max-width: $bp-larger) {
+      // padding-right: 2rem;
+      margin: 0;
+      // width: 15rem;
+      flex: 1;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      &:not(:first-child) {
+        border-left: 1px solid rgba(51, 51, 51, 0.1);
+      }
+    }
+
+    .fas {
+      font-size: 1.1rem;
+      padding-left: 0.4rem;
+      padding-bottom: 0.25rem;
+
+      @media only screen and (max-width: $bp-small) {
+        display: none;
+      }
+    }
+  }
+
+  &__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-image: linear-gradient(to left, var(--color-red-light), var(--color-red));
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-image 0.1s;
+  }
+
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__item:active::before {
+    background: var(--color-red);
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 0.5rem;
+
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-larger) {
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      // padding-left: 0;
+    }
+  }
+}

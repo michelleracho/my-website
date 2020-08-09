@@ -1,0 +1,102 @@
+// ============= HEADER =============
+.header {
+  // border: 2px solid skyblue;
+  height: 100vh;
+  position: relative;
+
+  @media only screen and (max-width: $bp-medium) {
+    background-size: cover;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(119, 119, 119, 0.5),
+        rgba(119, 119, 119, 0.6)
+      ),
+      url(../img/header-photo.jpg);
+    background-position: center;
+    padding: 5rem;
+
+    // background-position: left 0 bottom -12rem;
+    // rotate: none;
+
+    // background-image: url(../img/header-photo.jpg);
+    // filter: grayscale(60%);
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    background-position: bottom left;
+  }
+
+  &__heading {
+    position: relative;
+    // top: 18rem;
+    // left: 0;
+    z-index: 100;
+
+    h1 {
+      font-size: 9rem;
+      font-weight: 300;
+      line-height: 100%;
+      padding-top: 15rem;
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 5rem;
+      }
+
+      span:first-child {
+        display: block;
+      }
+
+      .highlight {
+        letter-spacing: 3px;
+        line-height: 4rem;
+
+        @media only screen and (max-width: $bp-medium) {
+          line-height: 100%;
+        }
+
+        &:hover {
+          line-height: 100%;
+        }
+      }
+
+      // & .highlight:hover {
+      //   line-height: normal;
+      // }
+    }
+
+    h2 {
+      font-size: 4rem;
+      font-weight: 200;
+      margin-bottom: 2rem;
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    top: 0;
+    // right: -3.2rem;
+    right: 0;
+
+    z-index: 10;
+
+    @media only screen and (max-width: $bp-larger) {
+      top: -3rem;
+      right: -5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+  }
+
+  &__img {
+    height: 75vh;
+    filter: grayscale(60%);
+    box-shadow: var(--shadow);
+    border-radius: 3px;
+  }
+}

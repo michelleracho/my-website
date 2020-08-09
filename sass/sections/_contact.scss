@@ -1,0 +1,60 @@
+// ============= CONTACT =============
+.contact {
+  font-size: 1.6rem;
+  margin-bottom: 30rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-direction: column;
+      // justify-content: center;
+      text-align: center;
+    }
+
+    &--main {
+      display: inline-block;
+      padding-right: 1rem;
+    }
+
+    &--smiley {
+      font-size: 1.8rem;
+      color: var(--color-yellow);
+      animation: roll 5s infinite;
+
+      // color: transparent;
+      // background-color: var(--color-yellow);
+      // -webkit-background-clip: text;
+      // background-clip: text;
+    }
+  }
+
+  @keyframes roll {
+    0% {
+      transform: translateX(0) rotate(-100deg); // -120
+    }
+    50% {
+      transform: translateX(100%) rotate(100deg); // 0
+    }
+    100% {
+      transform: translateX(0) rotate(-100deg); // -120
+    }
+  }
+
+  &__icons {
+  }
+}
