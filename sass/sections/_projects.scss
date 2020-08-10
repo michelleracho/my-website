@@ -1,1 +1,38 @@
 // ============= PROJECTS =============
+.projects {
+  font-size: 1.6rem;
+  margin-bottom: 20rem;
+}
+
+.project {
+  & > p {
+    text-align: center;
+  }
+
+  &__list {
+    // margin-top: 2rem;
+    margin: 5rem;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__title {
+  }
+
+  &__description,
+  &__links,
+  &__preview {
+    margin-left: 3rem;
+  }
+
+  &__description {
+  }
+
+  &__preview {
+    width: 50%;
+    border: 0.5rem solid var(--color-gray-light-1);
+    border-radius: 5px;
+  }
+}

@@ -104,7 +104,8 @@
     display: inline-block;
   }
 
-  &-learn-more {
+  &__learn-more,
+  &__prj-link {
     &:link,
     &:visited {
       transition: all 0.2s;
@@ -137,7 +138,12 @@
     }
   }
 
-  &-contact {
+  &__prj-link {
+    margin-right: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__contact {
     &:link,
     &:visited {
       font-size: 4rem;
