@@ -11,7 +11,7 @@
   --color-yellow: #ffd98a;
   --shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-small: 0 0 0.6rem rgba(0, 0, 0, 0.3);
-  --shadow-yellow: 0 2rem 6rem rgba(255, 217, 138, 0.3);
+  --shadow-yellow: 0 0 1rem rgba(255, 217, 138, 0.3);
 }
 
 *,
@@ -730,24 +730,28 @@ body {
   text-align: center;
 }
 
-.project__list {
-  margin: 5rem;
-}
-
 .project__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 5rem 5rem 0 5rem;
 }
 
-.project__description, .project__links, .project__preview {
-  margin-left: 3rem;
+.project__description {
+  margin: 1.5rem auto;
+}
+
+.project__description .highlight {
+  line-height: 1.1;
 }
 
 .project__preview {
   width: 50%;
   border: 0.5rem solid var(--color-gray-light-1);
   border-radius: 5px;
+  margin-left: 4rem;
+  -webkit-box-shadow: var(--shadow-yellow);
+          box-shadow: var(--shadow-yellow);
 }
 
 .side-nav {
