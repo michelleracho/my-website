@@ -4,7 +4,7 @@
   display: inline-block;
   letter-spacing: 1rem;
   text-transform: lowercase;
-  opacity: 0.3;
+  opacity: 0.7;
   // margin: 3rem 0;
   margin-bottom: 5rem;
   border-bottom: 2px solid var(--color-yellow);
@@ -15,11 +15,11 @@
 
   @media only screen and (max-width: $bp-medium) {
     padding-top: 10rem;
+    letter-spacing: 0.5rem;
   }
 
   @media only screen and (max-width: $bp-smallest) {
     font-size: 3.5rem;
-    letter-spacing: 0.5rem;
   }
 }
 
