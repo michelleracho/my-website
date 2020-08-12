@@ -24,6 +24,11 @@
       margin: auto 5rem;
       // margin: 2rem 5rem auto 5rem;
     }
+
+    @media only screen and (max-width: $bp-small) {
+      // border: 2px solid skyblue;
+      margin: auto;
+    }
   }
 
   &__list {
@@ -37,6 +42,11 @@
 
     @media only screen and (max-width: $bp-medium) {
       flex-direction: column;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      // border: 2px solid skyblue;
+      margin: 5rem auto 0 auto;
     }
   }
 

@@ -15,8 +15,9 @@
     flex-direction: column;
     margin: auto 5rem;
 
-    @media only screen and (max-width: $bp-larger) {
+    @media only screen and (max-width: $bp-small) {
       // border: 2px solid skyblue;
+      margin: auto;
     }
   }
 

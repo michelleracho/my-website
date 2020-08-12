@@ -109,6 +109,14 @@ body {
   margin-right: 1.2rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .list__heading {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .list__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -757,6 +765,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .project > p {
+    margin: auto;
+  }
+}
+
 .project__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -770,6 +784,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project__item {
+    margin: 5rem auto 0 auto;
   }
 }
 
@@ -979,6 +999,12 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto 5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .skills__content {
+    margin: auto;
+  }
 }
 
 .skills__dev {
