@@ -663,6 +663,12 @@ body {
   padding-top: 15rem;
 }
 
+@media only screen and (max-width: 68.75em) {
+  .header__heading h1 {
+    padding-top: 12rem;
+  }
+}
+
 @media only screen and (max-width: 31.25em) {
   .header__heading h1 {
     font-size: 5rem;
@@ -901,12 +907,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 31.25em) {
-  .side-nav__item:not(:first-child) {
-    border-left: 1px solid rgba(51, 51, 51, 0.1);
-  }
-}
-
 .side-nav__item .fas {
   font-size: 1.1rem;
   padding-left: 0.4rem;
@@ -966,6 +966,12 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    padding-right: 5px;
   }
 }
 
